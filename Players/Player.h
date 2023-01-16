@@ -1,12 +1,11 @@
 //
 // Created by Amit and Tal on 1/12/2022.
 //
-#ifndef EX2_Player_H
-#define EX2_Player_H
+#ifndef EX4_Player_H
+#define EX4_Player_H
 
 #include <string>
-
-#include "utilities.h"
+#include "../utilities.h"
 
 class Player {
 
@@ -25,35 +24,27 @@ class Player {
      *      A new instance of Player.
      */
    Player(const std::string name, int maxHP = INITIAL_MAX_HP, int force = INITIAL_FORCE, 
-   int level = 1, int coins = 0, int HP = INITIAL_MAX_HP);
+   int level = 1, int coins = 10, int HP = INITIAL_MAX_HP);
 
   /*
     * Copy C'tor of Player class
     *Not needed, unless copy constructor is not supposed to have same name
     //TODO: FIGURE THIS SHIT OUT
    */
-   Player(const Player & player);
+   Player(const Player & player) = default;
 
   /*
     * D'tor of Player class
     *Not needed, unless copy constructor is not supposed to have same name
     //TODO: FIGURE THIS SHIT OUT
    */
-   ~Player();
+    virtual ~Player() = default;
 
   /*
    * Assigment Operator of Player class.
    *take data from an existing object to another existing object.
    */
-   Player & operator = (const Player & );
-
-  /*
-   * @brief printing the Player info.
-   * @return
-   *      void
-   */
-
-   void printInfo() const;
+   Player & operator = (const Player & player ) = default;
 
   /*
    * @brief
@@ -63,6 +54,15 @@ class Player {
    *      true, if below lvl 10. False if lvl 10.
   */
    void levelUp();
+
+   /*
+   * @brief
+      Get Player name.
+   *
+   * @return
+   *      Player name.
+  */
+   std::string getName() const; 
 
   /*
    * @brief 
@@ -83,6 +83,17 @@ class Player {
   */
    void buff(int amount);
 
+   /*
+   *@brief 
+      decreasing to the invoker's force.
+      @param
+      amount to be decreased.
+   * @return
+      void
+  */ 
+
+   void weaken(int amount);
+
   /*
      *@brief 
         Heals the invoker by the argument's amount. Cannot surpass maxHP.
@@ -91,7 +102,7 @@ class Player {
      * @return
         void
     */
-   void heal(int amount);
+  virtual void heal(int amount);
 
   /*
      *@brief 
@@ -120,7 +131,7 @@ class Player {
    * @return
       void
   */
-   void addCoins(int amount);
+    virtual void addCoins(int amount);
 
   /*
      * @brief 
@@ -138,22 +149,40 @@ class Player {
    *      int Invoker's strength.
   */
 
-   int getAttackStrength() const;
+  virtual int getAttackStrength() const ;
 
-   private: 
-  
-   std::string m_name;
+  virtual std::string getJob() const = 0;
+
+  friend std::ostream& operator<<(std::ostream& os, const Player& Player);
+
+
+   protected: 
+
+     std::string m_name;
    int m_maxHP;
    int m_force;
    int m_level;
    int m_coins;
    int m_HP;
 
+
    static const int INITIAL_FORCE = 5;
    static const int MAX_LEVEL = 10;
    static const int INITIAL_MAX_HP = 100;
    static const int STARTING_LEVEL = 1;
    static const int STARTING_COINS = 0;
+   static const int MULTIPLY_FACTOR = 2;
+
+   
+      std::string m_name;
+   int m_maxHP;
+   int m_force;
+   int m_level;
+   int m_coins;
+   int m_HP;
 
 };
-#endif //EX2_Player_H
+
+
+
+#endif //EX4_Player_H

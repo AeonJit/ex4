@@ -11,16 +11,7 @@ Player::Player(const std::string name, int maxHP, int force, int level,
 	m_level(STARTING_LEVEL),
 	m_coins(STARTING_COINS),
 	m_HP(maxHP)
-	{
-		//Invalid inputs
-		if (m_maxHP <= 0)
-		{
-			m_maxHP = INITIAL_MAX_HP;
-			m_HP = INITIAL_MAX_HP;
-		}
-
-		m_force = (m_force < 0 ? INITIAL_FORCE : m_force);
-	}
+	{};
 
 //copy consstructor. inizialize new Player object and give him the same data as the argument.
 Player::Player(const Player &player) = default;
@@ -31,10 +22,6 @@ Player::~Player() = default;
 //Assignment Operator. 
 Player &Player::operator=(const Player &) = default;
 
-void Player::printInfo() const
-{
-	printPlayerInfo(m_name.std::string::c_str(), m_level, m_force, m_HP, m_coins);
-}
 
 void Player::levelUp()
 {
@@ -48,6 +35,10 @@ void Player::levelUp()
 	{
 		m_level++;
 	}
+}
+
+std::string Player::getName() const {
+	return m_name;
 }
 
 int Player::getLevel() const
@@ -64,6 +55,20 @@ void Player::buff(int amount)
 	}
 
 	m_force += amount;
+}
+
+void Player::weaken(int amount)
+{
+	if (amount <= 0)
+	{
+		return;
+	}
+
+	m_force -= amount;
+	if(m_force < 0)
+	{
+		m_force = 0;
+	}
 }
 
 void Player::heal(int amount)
@@ -137,4 +142,10 @@ bool Player::pay(int amount)
 int Player::getAttackStrength() const
 {
 	return (m_force + m_level);
+}
+
+std::ostream& operator<<(std::ostream& os, const Player& player)
+{
+    printPlayerDetails(os, player.m_name, player.getJob() , player.m_level, player.m_force, player.m_HP, player.m_coins);
+    return os;
 }
