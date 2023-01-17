@@ -139,6 +139,7 @@ bool Player::pay(int amount)
 	}
 }
 
+
 int Player::getAttackStrength() const
 {
 	return (m_force + m_level);

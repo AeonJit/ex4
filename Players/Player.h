@@ -155,6 +155,7 @@ class Player {
 
   friend std::ostream& operator<<(std::ostream& os, const Player& Player);
 
+  static const int INITIAL_MAX_HP = 100;
 
    protected: 
 
@@ -168,7 +169,6 @@ class Player {
 
    static const int INITIAL_FORCE = 5;
    static const int MAX_LEVEL = 10;
-   static const int INITIAL_MAX_HP = 100;
    static const int STARTING_LEVEL = 1;
    static const int STARTING_COINS = 0;
    static const int MULTIPLY_FACTOR = 2;

@@ -8,11 +8,11 @@ bool Battle::playerVictorious(Player& player) const{
 }
 
 void Battle::applyEncounter(Player& player) const{
-    if((*this).playerVictorious(player)){
-        (*this).encounterWin(player);
+    if(this->playerVictorious(player)){
+        this->encounterWin(player);
     }
     else{
-        (*this).encounterLoss(player);
+        this->encounterLoss(player);
     }
     
 }
@@ -20,12 +20,12 @@ void Battle::applyEncounter(Player& player) const{
 void Battle::encounterWin(Player& player) const{
     player.addCoins(m_loot);
     player.levelUp();
-    printWinBattle(player.getName(),(*this).getName());
+    printWinBattle(player.getName(),this->getName());
 }
 
 void Battle::encounterLoss(Player& player) const{
     player.damage(m_damage);
-    printLossBattle(player.getName(),(*this).getName());
+    printLossBattle(player.getName(),this->getName());
 }
 
 std::ostream& Battle::printCard(std::ostream& os) const{

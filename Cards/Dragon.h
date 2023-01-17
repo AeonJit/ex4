@@ -20,5 +20,5 @@ class Dragon : public Battle {
 
     static const int DRAGON_FORCE = 25;
     static const int DRAGON_LOOT = 1000;
-    static const int DRAGON_DAMAGE = MAX_HP; //Will always kill defeated players, as required.
+    static const int DRAGON_DAMAGE = Player::INITIAL_MAX_HP; //Will always kill defeated players, as required.
 };
