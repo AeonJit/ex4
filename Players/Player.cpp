@@ -139,6 +139,23 @@ bool Player::pay(int amount)
 	}
 }
 
+void Player::manaEncounter(){
+	//no heal for non healers
+	printManaMessage(false);
+}
+
+void Player::barfightEncounter(){
+	//non warriors are damaged
+	this->damage(BARFIGHT_DAMAGE);
+	printBarfightMessage(false);
+}
+void Player::wellEncounter(){
+	//non ninjas are damaged
+	this->damage(WELL_DAMAGE);
+	printWellMessage(false);
+}
+
+
 
 int Player::getAttackStrength() const
 {
@@ -150,3 +167,4 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
     printPlayerDetails(os, player.m_name, player.getJob() , player.m_level, player.m_force, player.m_HP, player.m_coins);
     return os;
 }
+

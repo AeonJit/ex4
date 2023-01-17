@@ -64,6 +64,9 @@ class Player {
   */
    std::string getName() const; 
 
+   virtual std::string getJob() const = 0; 
+
+
   /*
    * @brief 
       retures the invoker's lvl.
@@ -151,11 +154,21 @@ class Player {
 
   virtual int getAttackStrength() const ;
 
-  virtual std::string getJob() const = 0;
-
+    /*
+   * @brief 
+      overloading os object .
+   * @return
+   *      out stream object overloaded.
+  */
   friend std::ostream& operator<<(std::ostream& os, const Player& Player);
 
   static const int INITIAL_MAX_HP = 100;
+
+   virtual void manaEncounter();
+   virtual void merchantEncounter();
+   virtual void barfightEncounter();
+   virtual void wellEncounter();
+   virtual void treasureEncounter();
 
    protected: 
 
@@ -173,14 +186,9 @@ class Player {
    static const int STARTING_COINS = 0;
    static const int MULTIPLY_FACTOR = 2;
 
-   
-      std::string m_name;
-   int m_maxHP;
-   int m_force;
-   int m_level;
-   int m_coins;
-   int m_HP;
 
+   static const int BARFIGHT_DAMAGE = 10;
+   static const int WELL_DAMAGE = 10;
 };
 
 

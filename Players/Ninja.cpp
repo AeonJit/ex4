@@ -19,6 +19,10 @@ void Ninja::addCoins(int amount)
 	m_coins += amount*MULTIPLY_FACTOR;
 }
 
+void Ninja::wellEncounter(){
+	printWellMessage(true);
+}
+
 std::string Ninja::getJob() const 
 {
     return JOB_STRING;

@@ -6,13 +6,17 @@
 
 const std::string Warrior::JOB_STRING = "Warrior";
 
-  Warrior::Warrior(const std::string name, int maxHP , int force, 
-   int level, int coins , int HP ) : Player(name) {};
+  Warrior::Warrior(const std::string name) : Player(name) {};
 
    int Warrior::getAttackStrength() const 
    {
     return(m_force*MULTIPLY_FACTOR + m_level);
    }
+
+  void Warrior::barfightEncounter(){
+      printBarfightMessage(true);
+
+    }
 
    std::string Warrior::getJob() const 
 {

@@ -12,6 +12,7 @@ class Gremlin : public Battle {
     Gremlin(const Gremlin&) = default;
     Gremlin& operator=(const Gremlin& sourceGremlin) = default;
 
+    std::string Gremlin::getName() const;
 
     private:
 

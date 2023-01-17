@@ -12,8 +12,7 @@ class Warrior : public Player {
     /*
     * C'tor of Warrior class.
    */
-  Warrior(const std::string name, int maxHP = INITIAL_MAX_HP, int force = INITIAL_FORCE, 
-   int level = 1, int coins = 10, int HP = INITIAL_MAX_HP);
+  Warrior(const std::string name);
 
    /*
     * Copy C'tor of Warrior class. base class ~ is virtual.
@@ -24,7 +23,7 @@ class Warrior : public Player {
    * Assigment Operator of Warrior class.
    *take data from an existing object to another existing object.
    */
-  Warrior & operator = (const Warrior & warrior ) = default;
+  Warrior &operator=(const Warrior & warrior ) = default;
    
     /*
     * D'tor of Warrior class. base class ~ is virtual.
@@ -36,6 +35,8 @@ class Warrior : public Player {
      but diffrently from the other kind of players his force = 2*force. 
     */
    int getAttackStrength()  const override;
+
+    void barfightEncounter() override;
 
 
    /*

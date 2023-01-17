@@ -12,6 +12,9 @@ class Witch : public Battle {
     Witch(const Witch&) = default;
     Witch& operator=(const Witch& sourceWitch) = default;
 
+    std::string getName() const;
+
+
     void encounterLoss(Player& player) const override;
 
     private:

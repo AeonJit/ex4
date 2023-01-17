@@ -2,7 +2,6 @@
 #include "Battle.h"
 #define EX4_BATTLE_H
 #endif
-#define MAX_HP 100
 
 class Dragon : public Battle {
     public:
@@ -12,7 +11,7 @@ class Dragon : public Battle {
     ~Dragon() = default;
     Dragon(const Dragon&) = default;
     Dragon& operator=(const Dragon& sourceDragon) = default;
-
+    std::string getName() const;
 
     std::ostream& printCard(std::ostream& os) const override;
 

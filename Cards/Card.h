@@ -6,17 +6,7 @@
 
 #include "Player.h"
 #include "../utilities.h"
-
-/*
- *  CardType:
- *  Each card has an type:
- *  BATTLE - Battle against a monster.
- *  BUFF - Increase your player's force by 'm_force' points of CardStats.
- *  HEAL - Increase your player's HP by 'm_heal' points  of CardStats (no more than maxHP points).
- *  TREASURE - Get 'm_profit' coins of CardStats.
-
-enum class CardType {Battle, Buff, Heal, Treasure}; // The type of the Card
-*/
+#include <string>
 
 
 class Card {
@@ -54,15 +44,10 @@ public:
 
     friend std::ostream& operator<<(std::ostream& os, const Card& card);
 
+    virtual std::ostream& printCard(std::ostream& os) const = 0;
 
    protected:
-    /*
-     * Prints the card info:
-     *
-     * @return
-     *      void
-    */
-    void printCard() const;
+
     virtual std::string getName() const = 0; 
 
 

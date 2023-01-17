@@ -39,6 +39,8 @@ class Ninja : public Player {
     */
   void addCoins(int amount) override;
 
+  void wellEncounter() override;
+
 /*
  *Getting the class of the player.
  */
