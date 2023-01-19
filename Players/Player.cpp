@@ -47,6 +47,10 @@ int Player::getLevel() const
 	return m_level;
 }
 
+int Player::getCoins() const{
+	return m_coins;
+}
+
 void Player::buff(int amount)
 {
 	if (amount <= 0)

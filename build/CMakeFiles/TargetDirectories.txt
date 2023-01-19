@@ -1,0 +1,3 @@
+C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build/CMakeFiles/exe_name.dir
+C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build/CMakeFiles/edit_cache.dir
+C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build/CMakeFiles/rebuild_cache.dir

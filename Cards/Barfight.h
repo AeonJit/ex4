@@ -7,7 +7,8 @@
 class Barfight : public Card
 {
 public:
-    static const std::string NAME;
+    static const std::string CARD_NAME;
+    std::string getName() const;
     Barfight() = default;
     ~Barfight() = default;
     Barfight(const Barfight&) = default;
@@ -15,9 +16,6 @@ public:
 
     void applyEncounter(Player& player) const;
 
-private:
-
-    std::string getName() const;
 };
 
 #endif //HW4_BARFIGHT_H

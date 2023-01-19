@@ -7,17 +7,19 @@
 class Well : public Card
 {
 public:
-    static const std::string NAME;
+    static const std::string CARD_NAME;
+    std::string getName() const;
+
     Well() = default;
     ~Well() = default;
     Well(const Well&) = default;
     Well& operator=(const Well& other) = default;
 
     void applyEncounter(Player& player) const;
+    
 
 private:
 
-    std::string getName() const;
 };
 
 #endif //HW4_well_H

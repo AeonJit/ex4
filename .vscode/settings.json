@@ -51,6 +51,20 @@
         "xmemory": "cpp",
         "xstddef": "cpp",
         "xtr1common": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "deque": "cpp",
+        "map": "cpp",
+        "xtree": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "cstdarg": "cpp",
+        "cwctype": "cpp",
+        "memory_resource": "cpp",
+        "numeric": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp",
+        "ranges": "cpp",
+        "bitset": "cpp",
+        "regex": "cpp"
     }
 }

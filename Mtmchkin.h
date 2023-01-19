@@ -1,5 +1,15 @@
 #ifndef MTMCHKIN_H_
 #define MTMCHKIN_H_
+#include "Players/Player.h"
+#include "Cards/Card.h"
+
+#include <vector>
+#include <deque>
+#include <map>
+#include <memory>
+
+using std::vector;
+using std::deque;
 
 class Mtmchkin{
 
@@ -46,6 +56,26 @@ public:
     *          int - number of rounds played
     */
     int getNumberOfRounds() const;
+
+    private:
+
+    void scanPlayersSize();
+    void scanPlayers();
+    vector<std::unique_ptr<Card>> m_cardsDeck;
+
+    deque<std::unique_ptr<Player>> m_actingPlayers;
+    deque<std::unique_ptr<Player>> m_losers;
+    deque<std::unique_ptr<Player>> m_winners;
+    deque<std::unique_ptr<Player>> m_leaderboards;
+
+    int m_playerAmount;
+    int m_cardsAmount;
+    int m_roundNum;
+
+    static const int MAX_NAME_LENGTH = 15;
+    static const int MIN_PLAYERS = 2;
+    static const int MAX_PLAYERS = 6;
+    static const int MIN_CARDS = 5;
 };
 
 

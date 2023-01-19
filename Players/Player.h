@@ -75,7 +75,13 @@ class Player {
   */
 
    int getLevel() const;
-
+ /*
+   * @brief 
+      retures the invoker's coins amount.
+   * @return
+   *      int Player's coins amount.
+  */
+   int getCoins() const;
   /*
    *@brief 
       adding to the invoker's force.
@@ -172,7 +178,7 @@ class Player {
 
    protected: 
 
-     std::string m_name;
+   std::string m_name;
    int m_maxHP;
    int m_force;
    int m_level;

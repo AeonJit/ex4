@@ -7,12 +7,12 @@ class Gremlin : public Battle {
     public:
 
     static const std::string CARD_NAME;
+    std::string getName() const;
     Gremlin();
     ~Gremlin() = default;
     Gremlin(const Gremlin&) = default;
     Gremlin& operator=(const Gremlin& sourceGremlin) = default;
 
-    std::string Gremlin::getName() const;
 
     private:
 

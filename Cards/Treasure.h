@@ -7,17 +7,16 @@
 class Treasure : public Card
 {
 public:
-    static const std::string NAME;
+    static const std::string CARD_NAME;
     Treasure() = default;
     ~Treasure() = default;
     Treasure(const Treasure&) = default;
     Treasure& operator=(const Treasure& other) = default;
-
+    std::string getName() const;
     void applyEncounter(Player& player) const;
 
 private:
 
-    std::string getName() const;
     static const int TREASURE_AMOUNT = 10;
 };
 

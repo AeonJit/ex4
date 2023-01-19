@@ -7,12 +7,12 @@ class Witch : public Battle {
     public:
 
     static const std::string CARD_NAME;
+    std::string getName() const;
     Witch();
     ~Witch() = default;
     Witch(const Witch&) = default;
     Witch& operator=(const Witch& sourceWitch) = default;
 
-    std::string getName() const;
 
 
     void encounterLoss(Player& player) const override;
