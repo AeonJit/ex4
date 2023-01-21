@@ -7,10 +7,8 @@
 class Well : public Card
 {
 public:
-    static const std::string CARD_NAME;
-    std::string getName() const;
-
-    Well() = default;
+    Well(const std::string cardName);
+    Well();
     ~Well() = default;
     Well(const Well&) = default;
     Well& operator=(const Well& other) = default;
@@ -20,6 +18,7 @@ public:
 
 private:
 
+static const int WELL_DAMAGE = 10;
 };
 
 #endif //HW4_well_H

@@ -1,11 +1,7 @@
 #include "Gremlin.h"
 
-const std::string Gremlin::CARD_NAME = "Gremlin";
 
-std::string Gremlin::getName() const{
-    return Gremlin::CARD_NAME;
-}
-
+Gremlin::Gremlin(const std::string cardName) :  Battle(GREMLIN_FORCE, GREMLIN_LOOT, GREMLIN_DAMAGE, cardName){};
 Gremlin::Gremlin() : Battle(GREMLIN_FORCE, GREMLIN_LOOT, GREMLIN_DAMAGE)
 {
 }

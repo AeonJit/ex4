@@ -31,22 +31,20 @@ class Healer : public Player {
     /*
     * D'tor of Ninja class. base class ~ is virtual.
    */
-     ~Healer() = default;
+     ~Healer() override = default;
 
     /*
      *adding hp to the Healer but twice then regular. .
     */
   void heal(int amount) override;
 
-  void manaEncounter() override;
 
 /*
  *Getting the class of the player.
  */
-std::string getJob() const ;
+std::string getJob() const override;
 
 static const std::string JOB_STRING;
-static const int MANA_HEAL_AMOUNT = 10;
 
 };
 

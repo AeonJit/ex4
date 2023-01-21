@@ -14,11 +14,11 @@ public:
 
     enum Choice {LEAVE_STORE, BUY_HP_POT  ,BUY_FORCE_UPGRADE};
     
-    static const std::string NAME;
 
     //constructor , copy constructor , = , destructor .
-    Merchant() = default;
-    ~Merchant() = default;
+    Merchant(const std::string cardName);
+    Merchant();
+    ~Merchant() override  = default;
     Merchant(const Merchant&) = default;
     Merchant& operator=(const Merchant& other) = default;
    

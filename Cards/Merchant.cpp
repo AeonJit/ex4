@@ -1,5 +1,8 @@
 #include "Merchant.h"
 
+
+Merchant::Merchant(const std::string cardName) : Card(cardName){};
+Merchant::Merchant() : Card("Merchant"){}; 
 //checking if the player gave right input ("0" / "1" / "2").
  bool validInput(std::string str)
  {  

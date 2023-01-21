@@ -1,19 +1,17 @@
-#ifndef EX4_BATTLE_H
+#ifndef EX4_DRAGON_H
+#define EX4_DRAGON_H
 #include "Battle.h"
-#define EX4_BATTLE_H
-#endif
+
 
 class Dragon : public Battle {
     public:
-
-    static const std::string CARD_NAME;
+    Dragon(const std::string cardName);
     Dragon();
     ~Dragon() = default;
     Dragon(const Dragon&) = default;
     Dragon& operator=(const Dragon& sourceDragon) = default;
-    std::string getName() const;
 
-    std::ostream& printCard(std::ostream& os) const override;
+    //std::ostream& printCard(std::ostream& os) const override;
 
     private:
 
@@ -21,3 +19,5 @@ class Dragon : public Battle {
     static const int DRAGON_LOOT = 1000;
     static const int DRAGON_DAMAGE = Player::INITIAL_MAX_HP; //Will always kill defeated players, as required.
 };
+
+#endif //EX4_DRAGON_H

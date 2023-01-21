@@ -13,25 +13,26 @@ class Ninja : public Player {
    */
   Ninja(const std::string name);
 
-   Ninja() = delete;
+  Ninja() = delete;
 
 
 
     /*
     * Copy C'tor of Ninja class. base class ~ is virtual.
    */
-   Ninja(const Ninja & ninja) = default;
+  Ninja(const Ninja & ninja) = default;
 
    /*
    * Assigment Operator of Ninja class.
    *take data from an existing object to another existing object.
    */
+   
    Ninja & operator = (const Ninja & ninja ) = default;
    
     /*
     * D'tor of Ninja class. base class ~ is virtual.
    */
-     ~Ninja() = default;
+    ~Ninja() override = default;
 
     /*
      *Adding coins to Ninja player is diffrenet from other player. he gets 2 times coins then usuall.
@@ -39,12 +40,12 @@ class Ninja : public Player {
     */
   void addCoins(int amount) override;
 
-  void wellEncounter() override;
+  
 
 /*
  *Getting the class of the player.
  */
-std::string getJob() const ;
+std::string getJob() const override ;
 
 static const std::string JOB_STRING ;
 

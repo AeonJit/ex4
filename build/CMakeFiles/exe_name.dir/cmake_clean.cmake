@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/exe_name.dir/Mtmchkin.cpp.obj"
-  "CMakeFiles/exe_name.dir/Mtmchkin.cpp.obj.d"
+  "CMakeFiles/exe_name.dir/main.cpp.obj"
+  "CMakeFiles/exe_name.dir/main.cpp.obj.d"
   "exe_name.exe"
   "exe_name.exe.manifest"
   "exe_name.pdb"

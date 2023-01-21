@@ -1,6 +1,9 @@
 #include "assert.h"
 #include "Player.h"
-#include <string>
+#include "../utilities.h"
+
+
+
 
 //Player constructor. inizialized by inizializetion list.
 Player::Player(const std::string name, int maxHP, int force, int level,
@@ -12,15 +15,6 @@ Player::Player(const std::string name, int maxHP, int force, int level,
 	m_coins(STARTING_COINS),
 	m_HP(maxHP)
 	{};
-
-//copy consstructor. inizialize new Player object and give him the same data as the argument.
-Player::Player(const Player &player) = default;
-
-//Destructor.
-Player::~Player() = default;
-
-//Assignment Operator. 
-Player &Player::operator=(const Player &) = default;
 
 
 void Player::levelUp()
@@ -143,21 +137,9 @@ bool Player::pay(int amount)
 	}
 }
 
-void Player::manaEncounter(){
-	//no heal for non healers
-	printManaMessage(false);
-}
 
-void Player::barfightEncounter(){
-	//non warriors are damaged
-	this->damage(BARFIGHT_DAMAGE);
-	printBarfightMessage(false);
-}
-void Player::wellEncounter(){
-	//non ninjas are damaged
-	this->damage(WELL_DAMAGE);
-	printWellMessage(false);
-}
+
+
 
 
 

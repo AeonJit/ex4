@@ -7,14 +7,16 @@
 class Mana : public Card
 {
 public:
-    static const std::string CARD_NAME;
-    std::string getName() const;
-    Mana() = default;
+    Mana(const std::string cardName);
+    Mana();
     ~Mana() = default;
     Mana(const Mana&) = default;
     Mana& operator=(const Mana& other) = default;
 
     void applyEncounter(Player& player) const;
+
+private:
+    static const int MANA_HEAL = 10;
 };
 
 #endif //HW4_mana_H

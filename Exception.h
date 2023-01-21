@@ -1,6 +1,9 @@
 //
 // Created by Amit and Tal on 18/01/2023.
 //
+#ifndef EXCEPTION_H_
+#define EXCEPTION_H_
+
  #include <exception>
 
 
@@ -46,3 +49,5 @@ class DeckFileInvalidSize : public std::exception
    static constexpr const char* SIZE_INVALID_MSG = "Deck File Error: Deck size is invalid";
 
 };
+
+#endif //EXCEPTION_H_ 

@@ -28,7 +28,7 @@ class Warrior : public Player {
     /*
     * D'tor of Warrior class. base class ~ is virtual.
    */
-     ~Warrior() = default;
+     ~Warrior() override = default;
 
     /*
      *Get the attack strength of the warrior. 
@@ -36,7 +36,7 @@ class Warrior : public Player {
     */
    int getAttackStrength()  const override;
 
-    void barfightEncounter() override;
+   
 
 
    /*
@@ -47,7 +47,7 @@ class Warrior : public Player {
 /*
  *Getting the class of the player.
  */
-std::string getJob() const ;
+std::string getJob() const override ;
 
   static const std::string JOB_STRING;
 

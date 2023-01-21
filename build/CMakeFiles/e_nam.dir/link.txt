@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\e_nam.dir/objects.a
+C:\TDM-GCC-64\bin\ar.exe qc CMakeFiles\e_nam.dir/objects.a @CMakeFiles\e_nam.dir\objects1
+C:\TDM-GCC-64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\e_nam.dir/objects.a -Wl,--no-whole-archive -o e_nam.exe -Wl,--out-implib,libe_nam.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\e_nam.dir\linkLibs.rsp

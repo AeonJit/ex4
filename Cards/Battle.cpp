@@ -1,7 +1,8 @@
 #include "Battle.h"
 
-Battle::Battle(int force, int loot, int damage) : m_force(force), m_loot(loot), m_damage(damage){}
+Battle::Battle(int force, int loot, int damage,const std::string cardName) : Card(cardName),m_force(force), m_loot(loot), m_damage(damage) {}
 
+Battle::Battle() : Card("Battle"){};
 
 bool Battle::playerVictorious(Player& player) const{
     return (player.getAttackStrength() >= m_force);
@@ -30,7 +31,7 @@ void Battle::encounterLoss(Player& player) const{
 
 std::ostream& Battle::printCard(std::ostream& os) const{
     printCardDetails(os, getName());
-    printMonsterDetails(os, m_force, m_damage, m_loot,false);
+    printMonsterDetails(os, m_force, m_damage, m_loot,this->getName() == "Dragon");
     printEndOfCardDetails(os);
     return os;
 }

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Mtmchkin.cpp" "CMakeFiles/exe_name.dir/Mtmchkin.cpp.obj" "gcc" "CMakeFiles/exe_name.dir/Mtmchkin.cpp.obj.d"
+  "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/main.cpp" "CMakeFiles/exe_name.dir/main.cpp.obj" "gcc" "CMakeFiles/exe_name.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

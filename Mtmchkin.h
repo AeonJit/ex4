@@ -1,7 +1,8 @@
 #ifndef MTMCHKIN_H_
 #define MTMCHKIN_H_
-#include "Players/Player.h"
+
 #include "Cards/Card.h"
+
 
 #include <vector>
 #include <deque>
@@ -57,27 +58,50 @@ public:
     */
     int getNumberOfRounds() const;
 
-    private:
+    private: 
 
-    void scanPlayersSize();
+    int scanCards(const std::string fileName);
+    int scanPlayersSize();
     void scanPlayers();
-    vector<std::unique_ptr<Card>> m_cardsDeck;
+    void addToCardVector(const std::string& input);
+
+    void deckAddBarfight();
+    void deckAddDragon  ();
+    void deckAddGremlin ();
+    void deckAddMana    ();
+    void deckAddMerchant();
+    void deckAddTreasure();
+    void deckAddWell    ();
+    void deckAddWitch   ();
+
+    void addPlayer(const std::string& nameInput ,const std::string& jobInput);
+    void addHealer(const std::string& name);
+    void addNinja(const std::string& name);
+    void addWarrior(const std::string& name);
+
+    void printLeaderBoards () const;
+    void printDequeLeaderboards(const deque<std::unique_ptr<Player>>& playerDeque, int& curRank) const;
+    vector<std::unique_ptr<Card>> m_cardsDeck; //deck
 
     deque<std::unique_ptr<Player>> m_actingPlayers;
     deque<std::unique_ptr<Player>> m_losers;
     deque<std::unique_ptr<Player>> m_winners;
-    deque<std::unique_ptr<Player>> m_leaderboards;
+
+
+    std::unique_ptr<Card> m_curCard;
 
     int m_playerAmount;
     int m_cardsAmount;
     int m_roundNum;
+    int m_indexCurrentCard;
 
-    static const int MAX_NAME_LENGTH = 15;
     static const int MIN_PLAYERS = 2;
     static const int MAX_PLAYERS = 6;
     static const int MIN_CARDS = 5;
+    static const int STARTING_ROUND = 1;
+    static const int NO_ACTING_PLAYERS = 0;
+    static const int EVERY_ONE_PLAY = 0;
+    static const int FIRST_INDEX = 0;
 };
-
-
 
 #endif /* MTMCHKIN_H_ */

@@ -1,11 +1,15 @@
 #include "Mana.h"
+#include "../Players/Healer.h"
 
-const std::string Mana::CARD_NAME = "Mana";
-
-std::string Mana::getName() const{
-    return Mana::CARD_NAME;
-}
+Mana::Mana(const std::string cardName) : Card(cardName){};
+Mana::Mana() : Card("Mana"){};
 
 void Mana::applyEncounter(Player& player) const{
-    player.manaEncounter();
+    if ((dynamic_cast<Healer*> (&player))){
+        player.heal(MANA_HEAL);
+    }
+    printWellMessage((dynamic_cast<Healer*> (&player)));
+   
 }
+
+

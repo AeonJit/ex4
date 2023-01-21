@@ -1,10 +1,7 @@
 #include "Treasure.h"
 
-const std::string Treasure::CARD_NAME = "Treasure";
-
-std::string Treasure::getName() const{
-    return Treasure::CARD_NAME;
-}
+Treasure::Treasure(const std::string cardName) : Card(cardName){};
+Treasure::Treasure() :Card("Treasure"){};
 
 void Treasure::applyEncounter(Player& player) const{
     player.addCoins(TREASURE_AMOUNT);

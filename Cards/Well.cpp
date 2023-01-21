@@ -1,12 +1,16 @@
 #include "Well.h"
+#include "../Players/Ninja.h"
 
-const std::string Well::CARD_NAME = "Well";
 
+Well::Well(const std::string cardName) : Card(cardName){};
+Well::Well() : Card("Well"){};
 
 void Well::applyEncounter(Player& player) const{
-    player.wellEncounter();
+    if ((dynamic_cast<Ninja*> (&player))){
+        player.damage(WELL_DAMAGE);
+    }
+    printWellMessage((dynamic_cast<Ninja*> (&player)));
+    
 }
 
-std::string Well::getName() const{
-    return Well::CARD_NAME;
-}
+

@@ -1,13 +1,11 @@
-#ifndef EX4_BATTLE_H
+#ifndef EX4_WITCH_H
+#define EX4_WITCH_H
 #include "Battle.h"
-#define EX4_BATTLE_H
-#endif
 
 class Witch : public Battle {
     public:
 
-    static const std::string CARD_NAME;
-    std::string getName() const;
+    Witch(const std::string cardName);
     Witch();
     ~Witch() = default;
     Witch(const Witch&) = default;
@@ -23,3 +21,5 @@ class Witch : public Battle {
     static const int WITCH_LOOT = 2;
     static const int WITCH_DAMAGE = 10;
 };
+
+#endif //EX4_WITCH_H

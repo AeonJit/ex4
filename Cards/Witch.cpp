@@ -1,10 +1,8 @@
 #include "Witch.h"
 
-const std::string Witch::CARD_NAME = "Witch";
 
-std::string Witch::getName() const{
-    return Witch::CARD_NAME;
-}
+
+ Witch::Witch(const std::string cardName) :Battle(WITCH_FORCE, WITCH_LOOT, WITCH_DAMAGE ,cardName){};
 
 Witch::Witch() : Battle(WITCH_FORCE, WITCH_LOOT, WITCH_DAMAGE)
 {

@@ -1,7 +1,87 @@
 [
 {
   "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
-  "command": "C:\\TDM-GCC-64\\bin\\g++.exe   -g -std=gnu++11 -o CMakeFiles\\exe_name.dir\\Mtmchkin.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Mtmchkin.cpp\"",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Cards\\Barfight.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Cards\\Barfight.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Cards/Barfight.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Cards\\Battle.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Cards\\Battle.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Cards/Battle.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Cards\\Card.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Cards\\Card.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Cards/Card.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Cards\\Dragon.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Cards\\Dragon.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Cards/Dragon.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Cards\\Mana.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Cards\\Mana.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Cards/Mana.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Cards\\Gremlin.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Cards\\Gremlin.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Cards/Gremlin.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Cards\\Merchant.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Cards\\Merchant.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Cards/Merchant.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Cards\\Well.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Cards\\Well.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Cards/Well.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Cards\\Treasure.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Cards\\Treasure.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Cards/Treasure.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Cards\\Witch.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Cards\\Witch.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Cards/Witch.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Players\\Warrior.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Players\\Warrior.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Players/Warrior.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Players\\Player.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Players\\Player.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Players/Player.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Players\\Ninja.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Players\\Ninja.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Players/Ninja.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Players\\Healer.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Players\\Healer.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Players/Healer.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\tool\\main.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\tool\\main.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/tool/main.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\Mtmchkin.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\Mtmchkin.cpp\"",
   "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/Mtmchkin.cpp"
+},
+{
+  "directory": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\g++.exe  @CMakeFiles/ex4.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ex4.dir\\utilities.cpp.obj -c \"C:\\Users\\talyb\\OneDrive - Technion\\Desktop\\Matam\\EX4REAL\\ex4\\utilities.cpp\"",
+  "file": "C:/Users/talyb/OneDrive - Technion/Desktop/Matam/EX4REAL/ex4/utilities.cpp"
 }
 ]

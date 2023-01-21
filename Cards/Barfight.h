@@ -7,15 +7,15 @@
 class Barfight : public Card
 {
 public:
-    static const std::string CARD_NAME;
-    std::string getName() const;
-    Barfight() = default;
-    ~Barfight() = default;
+    Barfight(const std::string cardName);
+    Barfight();
+    ~Barfight() override  = default;
     Barfight(const Barfight&) = default;
     Barfight& operator=(const Barfight& other) = default;
 
     void applyEncounter(Player& player) const;
-
+private:
+    static const int BARFIGHT_DAMAGE = 10;
 };
 
 #endif //HW4_BARFIGHT_H

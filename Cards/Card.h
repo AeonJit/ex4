@@ -4,13 +4,14 @@
 #ifndef EX4_Card_H
 #define EX4_Card_H
 
-#include "../Players/Player.h"
 #include "../utilities.h"
 #include <string>
-
+    
 
 class Card {
 public:
+
+    Card(const std::string cardName);
     /*
      * C'tor of Card class
      *
@@ -44,12 +45,15 @@ public:
 
     friend std::ostream& operator<<(std::ostream& os, const Card& card);
 
-    virtual std::ostream& printCard(std::ostream& os) const = 0;
+    virtual std::ostream& printCard(std::ostream& os) const;
 
    protected:
 
-    virtual std::string getName() const = 0; 
+    std::string getName() const; 
 
+    private:
+
+    const std::string m_cardName;   
 
 };
 

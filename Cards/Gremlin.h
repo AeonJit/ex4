@@ -1,13 +1,10 @@
-#ifndef EX4_BATTLE_H
+#ifndef EX4_GREMLIN_H
+#define EX4_GREMLIN_H
 #include "Battle.h"
-#define EX4_BATTLE_H
-#endif
 
 class Gremlin : public Battle {
     public:
-
-    static const std::string CARD_NAME;
-    std::string getName() const;
+    Gremlin(const std::string cardName);
     Gremlin();
     ~Gremlin() = default;
     Gremlin(const Gremlin&) = default;
@@ -20,3 +17,4 @@ class Gremlin : public Battle {
     static const int GREMLIN_LOOT = 2;
     static const int GREMLIN_DAMAGE = 10;
 };
+#endif

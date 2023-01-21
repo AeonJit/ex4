@@ -5,10 +5,10 @@
 class Battle : public Card{
     public:
     //Constructor
-    Battle(int force, int loot, int damage); 
+    Battle(int force, int loot, int damage ,const std::string cardName = "Battle"); 
 
     //No def. constructor
-    Battle() = delete; 
+    Battle() ; 
     //D'tor
     virtual ~Battle() = default;
 
@@ -19,7 +19,7 @@ class Battle : public Card{
 
 //---------Methods----------------//
 
-    void applyEncounter(Player& player) const; //Overriding card's apply encounter.
+    void applyEncounter(Player& player) const override; 
     bool playerVictorious(Player& player) const;
     virtual void encounterLoss(Player& player) const; //Player is damaged/killed.
     void encounterWin(Player& player) const; //Gets loot
@@ -29,8 +29,7 @@ class Battle : public Card{
     protected:
     int m_force, m_loot, m_damage;
 
-    virtual std::ostream& printCard(std::ostream& os) const;
-    virtual std::string getName() const = 0; 
+    std::ostream& printCard(std::ostream& os) const override;
 };
 
 #endif //EX4_BATTLE_H

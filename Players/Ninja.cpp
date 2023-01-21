@@ -3,6 +3,7 @@
 //
 
 #include "Ninja.h"
+#include "../utilities.h"
 
  const std::string Ninja::JOB_STRING = "Ninja";
 
@@ -19,9 +20,7 @@ void Ninja::addCoins(int amount)
 	m_coins += amount*MULTIPLY_FACTOR;
 }
 
-void Ninja::wellEncounter(){
-	printWellMessage(true);
-}
+
 
 std::string Ninja::getJob() const 
 {

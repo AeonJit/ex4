@@ -3,6 +3,8 @@
 //
 
 #include "Warrior.h"
+#include "../utilities.h"
+
 
 const std::string Warrior::JOB_STRING = "Warrior";
 
@@ -13,10 +15,6 @@ const std::string Warrior::JOB_STRING = "Warrior";
     return(m_force*MULTIPLY_FACTOR + m_level);
    }
 
-  void Warrior::barfightEncounter(){
-      printBarfightMessage(true);
-
-    }
 
    std::string Warrior::getJob() const 
 {

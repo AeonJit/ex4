@@ -1,11 +1,17 @@
 #include "Barfight.h"
+#include "../Players/Warrior.h"
+
+
+Barfight::Barfight(const std::string cardName) : Card(cardName){};
+
+Barfight::Barfight():Card("Barfight"){};
 
 void Barfight::applyEncounter(Player& player) const{
-    player.barfightEncounter();
+    if (!(dynamic_cast<Warrior*> (&player))){
+        player.damage(BARFIGHT_DAMAGE);
+    }
+    printBarfightMessage((dynamic_cast<Warrior*> (&player)));
 }
 
-const std::string Barfight::CARD_NAME = "Barfight";
 
-std::string Barfight::getName() const{
-    return Barfight::CARD_NAME;
-}
+

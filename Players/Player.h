@@ -3,9 +3,9 @@
 //
 #ifndef EX4_Player_H
 #define EX4_Player_H
-
 #include <string>
-#include "../utilities.h"
+
+
 
 class Player {
 
@@ -166,16 +166,20 @@ class Player {
    * @return
    *      out stream object overloaded.
   */
-  friend std::ostream& operator<<(std::ostream& os, const Player& Player);
+
+ friend std::ostream& operator<<(std::ostream& os, const Player& Player);
 
   static const int INITIAL_MAX_HP = 100;
+  static const int MAX_LEVEL = 10;
 
+//TODO: THIS IS BAD
+   /*
    virtual void manaEncounter();
    virtual void merchantEncounter();
    virtual void barfightEncounter();
    virtual void wellEncounter();
    virtual void treasureEncounter();
-
+   */
    protected: 
 
    std::string m_name;
@@ -187,14 +191,10 @@ class Player {
 
 
    static const int INITIAL_FORCE = 5;
-   static const int MAX_LEVEL = 10;
    static const int STARTING_LEVEL = 1;
    static const int STARTING_COINS = 0;
    static const int MULTIPLY_FACTOR = 2;
 
-
-   static const int BARFIGHT_DAMAGE = 10;
-   static const int WELL_DAMAGE = 10;
 };
 
 

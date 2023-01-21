@@ -3,6 +3,8 @@
 //
 
 #include "Healer.h"
+#include "../utilities.h"
+
 
  const std::string Healer::JOB_STRING = "Healer";
 
@@ -27,7 +29,4 @@ std::string Healer::getJob() const
     return JOB_STRING;
 }
 
-void Healer::manaEncounter(){
-	this->heal(MANA_HEAL_AMOUNT);
-	printManaMessage(true);
-}
+

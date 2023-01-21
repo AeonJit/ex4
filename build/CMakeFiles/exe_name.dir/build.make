@@ -68,28 +68,28 @@ include CMakeFiles/exe_name.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/exe_name.dir/flags.make
 
-CMakeFiles/exe_name.dir/Mtmchkin.cpp.obj: CMakeFiles/exe_name.dir/flags.make
-CMakeFiles/exe_name.dir/Mtmchkin.cpp.obj: C:/Users/talyb/OneDrive\ -\ Technion/Desktop/Matam/EX4REAL/ex4/Mtmchkin.cpp
-CMakeFiles/exe_name.dir/Mtmchkin.cpp.obj: CMakeFiles/exe_name.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\talyb\OneDrive - Technion\Desktop\Matam\EX4REAL\ex4\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exe_name.dir/Mtmchkin.cpp.obj"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exe_name.dir/Mtmchkin.cpp.obj -MF CMakeFiles\exe_name.dir\Mtmchkin.cpp.obj.d -o CMakeFiles\exe_name.dir\Mtmchkin.cpp.obj -c "C:\Users\talyb\OneDrive - Technion\Desktop\Matam\EX4REAL\ex4\Mtmchkin.cpp"
+CMakeFiles/exe_name.dir/main.cpp.obj: CMakeFiles/exe_name.dir/flags.make
+CMakeFiles/exe_name.dir/main.cpp.obj: C:/Users/talyb/OneDrive\ -\ Technion/Desktop/Matam/EX4REAL/ex4/main.cpp
+CMakeFiles/exe_name.dir/main.cpp.obj: CMakeFiles/exe_name.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\talyb\OneDrive - Technion\Desktop\Matam\EX4REAL\ex4\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exe_name.dir/main.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exe_name.dir/main.cpp.obj -MF CMakeFiles\exe_name.dir\main.cpp.obj.d -o CMakeFiles\exe_name.dir\main.cpp.obj -c "C:\Users\talyb\OneDrive - Technion\Desktop\Matam\EX4REAL\ex4\main.cpp"
 
-CMakeFiles/exe_name.dir/Mtmchkin.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe_name.dir/Mtmchkin.cpp.i"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\talyb\OneDrive - Technion\Desktop\Matam\EX4REAL\ex4\Mtmchkin.cpp" > CMakeFiles\exe_name.dir\Mtmchkin.cpp.i
+CMakeFiles/exe_name.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe_name.dir/main.cpp.i"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\talyb\OneDrive - Technion\Desktop\Matam\EX4REAL\ex4\main.cpp" > CMakeFiles\exe_name.dir\main.cpp.i
 
-CMakeFiles/exe_name.dir/Mtmchkin.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe_name.dir/Mtmchkin.cpp.s"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\talyb\OneDrive - Technion\Desktop\Matam\EX4REAL\ex4\Mtmchkin.cpp" -o CMakeFiles\exe_name.dir\Mtmchkin.cpp.s
+CMakeFiles/exe_name.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe_name.dir/main.cpp.s"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\talyb\OneDrive - Technion\Desktop\Matam\EX4REAL\ex4\main.cpp" -o CMakeFiles\exe_name.dir\main.cpp.s
 
 # Object files for target exe_name
 exe_name_OBJECTS = \
-"CMakeFiles/exe_name.dir/Mtmchkin.cpp.obj"
+"CMakeFiles/exe_name.dir/main.cpp.obj"
 
 # External object files for target exe_name
 exe_name_EXTERNAL_OBJECTS =
 
-exe_name.exe: CMakeFiles/exe_name.dir/Mtmchkin.cpp.obj
+exe_name.exe: CMakeFiles/exe_name.dir/main.cpp.obj
 exe_name.exe: CMakeFiles/exe_name.dir/build.make
 exe_name.exe: CMakeFiles/exe_name.dir/linkLibs.rsp
 exe_name.exe: CMakeFiles/exe_name.dir/objects1
