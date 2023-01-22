@@ -20,18 +20,19 @@
 
 
 
-Mtmchkin::Mtmchkin(const std::string &fileName) : m_roundNum(STARTING_ROUND), 
-m_indexCurrentCard(FIRST_INDEX)
+Mtmchkin::Mtmchkin(const std::string &fileName)  
  {
+     m_roundNum= STARTING_ROUND ;
     printStartGameMessage(); //Welcome to the world of mtmchkin!
 
     //Scans amount of players and puts into m_playerAmount
      m_playerAmount = scanPlayersSize();
      scanPlayers();
     //Scans the file and puts the stuff into m_cardsDeck
-     m_cardsAmount = scanCards(fileName);
+     scanCards(fileName);
    
 }
+
 
 //getting size of players and check (2-6).
 int Mtmchkin::scanPlayersSize(){
@@ -64,16 +65,13 @@ int Mtmchkin::scanPlayersSize(){
 void Mtmchkin::scanPlayers(){
     int playersInitialized = 0;
 
-        //a group of 1-15 english letter characters (not case sensitive)
-    //a group of zero or more spaces
-    // a group of one or more english letter characters (not case sensitive)
-    //Note we don't care about trailing spaces or leading spaces (after 2nd word or before 1st)
-    std::regex inputPattern("^\\s*([a-zA-Z]{1,15})(\\s*)(\\w+)\\s*$");
-    //******split to invalid name and invalid class******\\
 
+    std::regex inputPattern("^\\s*([a-zA-Z]{1,15})(\\s*)(\\w+)\\s*$");
+    //This pattern expects a name made of up to 15 english letters
+    //it disregards spaces, and has no requirments for the 2nd word
 
     std::regex jobPattern("^(Ninja|Warrior|Healer)$");
-
+    //This pattern expects one of the 3 valid classes in our game
 
     while (playersInitialized < m_playerAmount)
     {   
@@ -82,18 +80,19 @@ void Mtmchkin::scanPlayers(){
         std::getline(std::cin, input);
         std::smatch match;
 
-        if (std::regex_match(input, match, inputPattern))
+        if (std::regex_match(input, match, inputPattern)) 
          {
             std::string nameInput = match[1];
             std::string jobInput = match[3];
             if(!std::regex_match(jobInput, jobPattern)){
+                //If 2nd pattern didn't match it means the class was wrongly inputted and we retry
                 printInvalidClass();
                 continue;
             }
             addPlayer(nameInput,jobInput);
         }
         
-        else{//invalid name
+        else{ //if no match it means the first pattern failed aka wrong name input
             printInvalidName();
             continue;
         }
@@ -103,12 +102,12 @@ void Mtmchkin::scanPlayers(){
 }
 
 void Mtmchkin::addPlayer(const std::string& nameInput ,const std::string& jobInput)
-{   //We can assume jobInput is valid
-    if(jobInput.compare(Ninja::JOB_STRING))
+{   //Here we can assume jobInput is valid
+    if(jobInput == Ninja::JOB_STRING)
     {
         addNinja(nameInput);
     }
-    else if(jobInput.compare(Warrior::JOB_STRING))
+    else if(jobInput == Warrior::JOB_STRING)
     {
         addWarrior(nameInput);
     }
@@ -156,7 +155,7 @@ int Mtmchkin::scanCards(const std::string fileName)
    //TODO: how to deal with fucking spaces in the middle start or end fo deck file??
 
 
-   //reading the file until EOF line by line and add to cards vector(of unique_ptr<Card>)
+   //reading the file until EOF line by line and add to cards deque(of unique_ptr<Card>)
    // according to the input.
    while(!file.eof())
    {
@@ -166,16 +165,15 @@ int Mtmchkin::scanCards(const std::string fileName)
     if(std::regex_match(getCard,CardPattern)) //If one of card names
     {   
         cardCounter++;
-        addToCardVector(getCard);
+        addToCardDeque(getCard);
     }
     else
     {
-        DeckFileFormatError formatError(lineCounter);
-        throw formatError;
+        throw DeckFileFormatError(lineCounter);
     }
    }
    //checkin min size of cards deck.
-   if(m_cardsAmount < MIN_CARDS)
+   if(cardCounter < MIN_CARDS)
    {
      throw DeckFileInvalidSize();
    }
@@ -233,47 +231,46 @@ void Mtmchkin::deckAddWitch(){
 
 
 //maping the input and adding to the vector the right type of unique_ptr<Card>.
-void Mtmchkin::addToCardVector(const std::string& input)
+void Mtmchkin::addToCardDeque(const std::string& input)
 {
     //We can assume input has name one of cards
-try{   
-    if(input.compare("Well"))
-    {
-        deckAddWell();
-    }
-    else if(input.compare("Mana"))
-    {
-       deckAddMana();
-    }
-     else if(input.compare("Witch"))
-    {
-       deckAddWitch();
-    }
-     else if(input.compare("Dragon"))
-    {
-        deckAddDragon();     
-    }
-     else if(input.compare("Barfight"))
-    {
-        deckAddBarfight(); 
-    }
-     else if(input.compare("Merchant"))
-    {
-        deckAddMerchant();     
-    }
-     else if(input.compare("Treasure"))
-    {
-        deckAddTreasure();        
-    }
-     else if(input.compare("Gremlin"))
-    {
-        deckAddGremlin();         
-    }
+    try{   
+        if(input == "Well")
+        {
+            deckAddWell();
+        }
+        else if(input == "Mana")
+        {
+        deckAddMana();
+        }
+        else if(input == "Witch")
+        {
+        deckAddWitch();
+        }
+        else if(input == "Dragon")
+        {
+            deckAddDragon();     
+        }
+        else if(input== "Barfight")
+        {
+            deckAddBarfight(); 
+        }
+        else if(input == "Merchant")
+        {
+            deckAddMerchant();     
+        }
+        else if(input == "Treasure")
+        {
+            deckAddTreasure();        
+        }
+        else if(input == "Gremlin")
+        {
+            deckAddGremlin();         
+        }
     }
 
     catch(std::bad_alloc& e){
         //Game is killed.
-        
     }
 }
 
@@ -304,7 +301,7 @@ void Mtmchkin::printLeaderBoard()const{
 //if there is no acting players game over.
 bool Mtmchkin::isGameOver() const
 {   
-    if(m_actingPlayers.size() == NO_ACTING_PLAYERS && getNumberOfRounds() != STARTING_ROUND)
+    if(m_actingPlayers.size() == 0 && getNumberOfRounds() != STARTING_ROUND)
     {
         return true;
     }
@@ -315,20 +312,20 @@ bool Mtmchkin::isGameOver() const
 void Mtmchkin::playRound()
 {   printRoundStartMessage(m_roundNum);
     int activePlayers = m_actingPlayers.size();
-    std::unique_ptr<Card> currentCard = std::move(m_cardsDeck[m_indexCurrentCard]);
     
-    
-    while(activePlayers != EVERY_ONE_PLAY)
+    while(activePlayers > 0)
     {
          std::unique_ptr<Player> currentPlayer = std::move(m_actingPlayers.front());
-      
+         std::unique_ptr<Card> currentCard = std::move(m_cardsDeck.front()); 
+         m_cardsDeck.pop_front();
          m_actingPlayers.pop_front();
 
-         printTurnStartMessage((*currentPlayer).getName());
+         printTurnStartMessage(currentPlayer->getName());
 
 
-         (*currentCard).applyEncounter(*currentPlayer);
-         
+         currentCard->applyEncounter(*currentPlayer); //Exception
+         //
+         m_cardsDeck.push_back(std::move(currentCard));
          
          if(currentPlayer->isKnockedOut()){
             m_losers.push_front(std::move(currentPlayer));
@@ -339,15 +336,12 @@ void Mtmchkin::playRound()
          else {
             m_actingPlayers.push_back(std::move(currentPlayer));
          }
-         
-         m_indexCurrentCard = (m_indexCurrentCard+1) % (m_cardsDeck.size());
          activePlayers--;
 
     }
     m_roundNum++;
 
     if(isGameOver())
-        //Gameover
     {
         printGameEndMessage();
     }

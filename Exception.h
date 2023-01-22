@@ -3,15 +3,18 @@
 //
 #ifndef EXCEPTION_H_
 #define EXCEPTION_H_
-
+#define DEBUG
  #include <exception>
-
+ #include <iostream>
 
  class DeckFileNotFound : public std::exception
  {
     public:
    const char* what() const noexcept override
-   {
+   {   
+       #ifdef DEBUG
+       std::cout << EXCEPTION_MSG << std::endl;
+       #endif
        return EXCEPTION_MSG;
    }
    
@@ -29,7 +32,10 @@
     }
     
    const char* what() const noexcept override
-   { 
+   {    
+       #ifdef DEBUG
+       std::cout << m_exceptionMsg << std::endl;
+       #endif
        return m_exceptionMsg.c_str();
    }
    
@@ -41,7 +47,10 @@ class DeckFileInvalidSize : public std::exception
 {
     public:
       const char* what() const noexcept override
-   { 
+   {    
+       #ifdef DEBUG
+       std::cout << SIZE_INVALID_MSG << std::endl;
+       #endif
        return SIZE_INVALID_MSG;
    }
 

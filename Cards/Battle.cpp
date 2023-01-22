@@ -1,6 +1,7 @@
 #include "Battle.h"
 
-Battle::Battle(int force, int loot, int damage,const std::string cardName) : Card(cardName),m_force(force), m_loot(loot), m_damage(damage) {}
+Battle::Battle(int force, int loot, int damage,const std::string cardName) :
+ m_force(force), m_loot(loot), m_damage(damage), Card(cardName) {}
 
 Battle::Battle() : Card("Battle"){};
 

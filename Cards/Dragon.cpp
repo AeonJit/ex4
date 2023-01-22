@@ -3,7 +3,7 @@
 
 Dragon::Dragon(const std::string cardName) : Battle(DRAGON_FORCE, DRAGON_LOOT, DRAGON_DAMAGE,cardName){};
 
-Dragon::Dragon() : Battle(DRAGON_FORCE, DRAGON_LOOT, DRAGON_DAMAGE)
+Dragon::Dragon() : Battle(DRAGON_FORCE, DRAGON_LOOT, DRAGON_DAMAGE, "Dragon")
 {
 }
 

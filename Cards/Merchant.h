@@ -19,7 +19,7 @@ public:
     Merchant(const std::string cardName);
     Merchant();
     ~Merchant() override  = default;
-    Merchant(const Merchant&) = default;
+    Merchant(const Merchant&) = delete;
     Merchant& operator=(const Merchant& other) = default;
    
     //aplly card action.

@@ -8,7 +8,8 @@ class Battle : public Card{
     Battle(int force, int loot, int damage ,const std::string cardName = "Battle"); 
 
     //No def. constructor
-    Battle() ; 
+    Battle();
+     
     //D'tor
     virtual ~Battle() = default;
 

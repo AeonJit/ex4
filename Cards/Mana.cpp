@@ -8,7 +8,7 @@ void Mana::applyEncounter(Player& player) const{
     if ((dynamic_cast<Healer*> (&player))){
         player.heal(MANA_HEAL);
     }
-    printWellMessage((dynamic_cast<Healer*> (&player)));
+    printManaMessage((dynamic_cast<Healer*> (&player)));
    
 }
 

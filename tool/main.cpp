@@ -6,8 +6,8 @@
 
 
 int main() {
-Mtmchkin game("../deck.txt");
-while(!game.isGameOver() /*&& game.getNumberOfRounds() < MAX_ROUNDS*/)
+Mtmchkin game("../deck2.txt");
+while(!game.isGameOver()/* && game.getNumberOfRounds() < MAX_ROUNDS*/)
 {
     game.playRound();
 }
